@@ -19,16 +19,20 @@ export class UsersService {
     try {
       const newUser = new this.userModel(createUserDto);
       return await newUser.save();
-    } catch (error) {
-      if ((error as { code?: number }).code === 11000) {
+    } catch (_error) {
+      if ((_error as { code?: number }).code === 11000) {
         throw new ConflictException('User already exists');
       }
       throw new InternalServerErrorException('Failed to create user');
     }
   }
 
-  findAll() {
-    return `This action returns all users`;
+  async findAll() {
+    try {
+      return await this.userModel.find().exec();
+    } catch {
+      throw new InternalServerErrorException('Failed to fetch users');
+    }
   }
 
   // findOne(id: number) {
