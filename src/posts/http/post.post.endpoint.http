@@ -1,0 +1,13 @@
+POST http://localhost:8000/posts
+Content-Type: application/json
+
+{
+  "title": "My First Post",
+  "postType": "post",
+  "slug": "my-first-post",
+  "status": "draft",
+  "content": "This is my first post content.",
+  "featureImageUrl": "https://example.com/image.jpg",
+  "authorId": "69c9164419b23a926a00dad5",
+  "publishedAt": "2026-03-29"
+}

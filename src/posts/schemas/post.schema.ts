@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import mongoose, { Document } from 'mongoose';
+import { User } from 'src/users/schemas/user.schema';
 
 export enum PostType {
   POST = 'post',
@@ -60,6 +61,13 @@ export class Post extends Document {
     required: false,
   })
   publishedAt?: Date;
+
+  @Prop({
+    type: mongoose.Schema.Types.ObjectId,
+    ref: User.name,
+    required: true,
+  })
+  authorId!: User;
 }
 
 export const PostSchema = SchemaFactory.createForClass(Post);
