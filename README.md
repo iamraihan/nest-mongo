@@ -75,8 +75,24 @@ src/
 Create a `.env` file in the root:
 
 ```env
-MONGODB_URI=mongodb://localhost:27017
+MONGODB_URI=mongodb://root:password@localhost:27017
 ```
+
+## Docker
+
+A `docker-compose.yml` is included to spin up MongoDB locally:
+
+```bash
+docker compose up -d
+```
+
+This starts a MongoDB 8.0 container (`nest-mongo-db`) on port `27017` with a persistent volume (`mongo-data`).
+
+| Variable | Value |
+|----------|-------|
+| Username | `root` |
+| Password | `password` |
+| Port | `27017` |
 
 ## Setup
 
