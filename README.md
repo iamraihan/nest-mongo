@@ -128,4 +128,4 @@ pnpm run test:cov
 
 ## License
 
-[MIT](https://github.com/nestjs/nest/blob/master/LICENSE)
+[MIT](https://github.com/nestjs/nest/blob/master/LICENSE).
