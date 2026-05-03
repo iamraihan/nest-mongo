@@ -1,6 +1,6 @@
 # NestJS + MongoDB REST API
 
-A REST API built with [NestJS](https://nestjs.com/) and [MongoDB](https://www.mongodb.com/) (via Mongoose), demonstrating a modular architecture with Users and Posts resources
+A REST API built with [NestJS](https://nestjs.com/) and [MongoDB](https://www.mongodb.com/) (via Mongoose), demonstrating a modular architecture with Users and Posts resources.
 
 ## Tech Stack
 
